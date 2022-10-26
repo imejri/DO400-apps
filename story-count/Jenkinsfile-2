@@ -1,7 +1,9 @@
 
 node {
+    environement {
+        BRANCH_NAME = 'main'
+    }
     stage('Hello') {
-        def BRANCH_NAME='main'
         echo "le nom de la branche est $BRANCH_NAME"
         if (env.BRANCH_NAME == 'main') {
             echo 'Hello Manuel!'
