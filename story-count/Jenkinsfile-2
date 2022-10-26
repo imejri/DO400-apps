@@ -1,6 +1,6 @@
 
 node {
-    environement {
+    environment {
         BRANCH_NAME = 'main'
     }
     stage('Hello') {
