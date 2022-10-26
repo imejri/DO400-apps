@@ -1,13 +1,8 @@
-
-String BRANCH_NAME = 'main'
-node {  
+def people = ['Eduardo', 'Jordi']
+node {
     stage('Hello') {
-        echo "le nom de la branche est $BRANCH_NAME"
-        if (env.BRANCH_NAME == 'main') {
-            echo 'Hello Manuel!'
-        } 
-        else {
-            echo 'Hello Enol!'
-            }
-        } 
+        for (int i = 0; i < people.size(); ++i) {
+            echo "Hello ${people[i]}!"
+        }
+    } 
 }
