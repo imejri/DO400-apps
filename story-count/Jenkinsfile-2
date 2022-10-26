@@ -1,5 +1,5 @@
 
-String BRANCH_NAME = 'main'
+//String BRANCH_NAME = 'main'
 node {  
     stage('Hello') {
         echo "le nom de la branche est $BRANCH_NAME"
