@@ -1,6 +1,6 @@
 node('nodejs') {
     stage('Checkout') {
-git url: 'https://github.com/YOUR_GITHUB_USER/DO400-apps', branch: 'scripted-pipelines'
+git url: 'https://github.com/imejri/DO400-apps', branch: 'scripted-pipelines'
     }
     stage('Test') {
         sh 'node ./simple-webapp/backend/test.js'
