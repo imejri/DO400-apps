@@ -1,0 +1,8 @@
+node {
+    stage('Hello') {
+        salute('Marek')
+    } 
+}
+def salute(person) {
+    echo "Hello ${person}!"
+}
