@@ -1,0 +1,19 @@
+pipeline {
+
+   agent any
+
+   stages {
+      stage('Checkout') {
+          
+          steps {
+            git branch: 'main', url: 'https://github.com/RedHatTraining/DO400-apps'
+            } //steps
+        } //stage
+
+      stage('Test Word Count') {
+          steps {
+            sh './story-count/test-wc.sh ./story-count/frankenstein.txt 500'
+            } 
+        }
+    } // stages
+} // pipeline
