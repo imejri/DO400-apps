@@ -2,7 +2,7 @@ def BRANCH_NAME='main'
 node {
     stage('Hello') {
         echo "le nom de la branche est $BRANCH_NAME"
-        if (env.BRANCH_NAME == 'main') {
+        if (env.BRANCH_NAME == "main") {
             echo 'Hello Manuel!'
         } 
         else {
