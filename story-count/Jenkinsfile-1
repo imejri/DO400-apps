@@ -1,0 +1,7 @@
+String person = 'Zach'
+def anotherPerson = 'Richard' 
+node {
+    stage('Hello') {
+        echo "Hello ${person} and ${anotherPerson}!"
+    }
+}
