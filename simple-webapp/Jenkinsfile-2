@@ -8,7 +8,7 @@ stages {
         stage('Checkout') {
             
             steps {
-            git url: 'https://github.com/YOUR_GITHUB_USER/DO400-apps', branch: 'scripted-pipelines'
+            git url: 'https://github.com/imejri/DO400-apps', branch: 'scripted-pipelines'
                  }
         } // stage
 
@@ -18,7 +18,7 @@ stages {
                 sh 'simple-webapp/backend/test_api.sh'
             } // steps
         } // stage
-        
+
         stage('Deploy') {
             steps {
                 echo 'Deploying...'
