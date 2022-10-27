@@ -1,0 +1,28 @@
+pipeline {
+    agent {
+        node {
+            label 'nodejs'
+        } 
+    } // agent
+stages {
+        stage('Checkout') {
+            
+            steps {
+            git url: 'https://github.com/YOUR_GITHUB_USER/DO400-apps', branch: 'scripted-pipelines'
+                 }
+        } // stage
+
+        stage('Test') {
+            
+            steps {
+                sh 'simple-webapp/backend/test_api.sh'
+            } // steps
+        } // stage
+        
+        stage('Deploy') {
+            steps {
+                echo 'Deploying...'
+            }
+        } // stage
+    } // stages
+}// pipeline
