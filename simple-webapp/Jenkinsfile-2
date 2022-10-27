@@ -15,7 +15,13 @@ stages {
         stage('Test') {
             
             steps {
-                sh 'simple-webapp/backend/test_api.sh'
+                script {
+
+                    def verbs = ['GET', 'POST', 'PUT']
+                    for (int i = 0; i < verbs.size(); ++i) {
+                        sh "simple-webapp/backend/test_api.sh ${verbs[i]}"
+                    }
+                }
             } // steps
         } // stage
 
