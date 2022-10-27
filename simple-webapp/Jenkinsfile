@@ -14,6 +14,7 @@ git url: 'https://github.com/imejri/DO400-apps', branch: 'scripted-pipelines'
             sh 'node ./simple-webapp/frontend/test.js'
         } // if
     } // stage
+}
     def isChanged(dir) {
     changedFilepaths = sh(
         script: 'git diff-tree --no-commit-id --name-only -r HEAD',returnStdout: true).trim().split('\n')
@@ -22,7 +23,7 @@ git url: 'https://github.com/imejri/DO400-apps', branch: 'scripted-pipelines'
             return true;
             }
         } // for
-    } // fin def
-
         return false
+    // fin def
+    
 } // node
